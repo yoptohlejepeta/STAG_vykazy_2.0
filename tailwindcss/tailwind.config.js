@@ -8,7 +8,12 @@ module.exports = {
       require('daisyui')
     ],
     daisyui: {
-      themes: ["dark", "retro", "coffee",],
+      themes: ["dark", "retro", "coffee", "cupcake", "bumblebee"],
     },
+    theme: {
+      fontFamily: {
+        // roboto
+        sans: ['Roboto', 'sans-serif'],
+      },
+  },
   }
-  

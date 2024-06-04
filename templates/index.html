@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="coffee">
+<html lang="en" data-theme="bumblebee">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoptohlejepeta testting</title>
+    <title>Yoptohlejepeta dashboard</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <link href="static/css/app.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mx-auto pt-5">
-        <div class="mockup-browser border bg-base-300">
-            <div class="mockup-browser-toolbar">
-                <div class="input">https://yoptohlejepeta.github.io</div>
-            </div>
-            <div class="flex flex-col items-center px-4 py-16 bg-base-200">
-                <h1 class="text-9xl">
-                    Hello World
-                </h1>
-                <div class="avatar">
-                    <div class="w-24 rounded-full border-white border-2">
-                        <img src="https://avatars.githubusercontent.com/u/101563288?v=4" />
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h1 class="text-9xl text-center pt-5">
+        Dashboard
+    </h1>
+    <div id="loading" class="flex justify-center htmx-indicator">
+        <progress class="progress w-100"></progress>
     </div>
     <div class="container mx-auto pt-5">
-        {{ plot | safe}}
+        <form hx-get="/plot" hx-target="#plot" hx-swap="innerHTML" hx-indicator="#loading">
+            <div class="flex justify-center pt-5 join">
+                <!-- dropdown -->
+                <select name="db" class="select select-bordered join-item">
+                    <option value="PostgreSQL">PostgreSQL</option>
+                    <option value="MongoDB">MongoDB</option>
+                    <option value="Redis">Redis</option>
+                </select>
+                <select name="type" class="select select-bordered join-item">
+                    <option value="scatter">Scatter</option>
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                </select>
+                <button type="submit" class="btn btn-primary join-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+                  </button>
+            </div>
+        </form>
     </div>
+
+    {% include 'components/plot.html' %}
+    {% include 'components/table.html' %}
+
 </body>
 </html>
