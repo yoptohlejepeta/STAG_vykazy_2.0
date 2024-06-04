@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "daisyui": "^4.11.1"
+  },
+  "scripts": {
+    "tailwind_watch": "npx tailwindcss -i ./styles/app.css -o ../static/css/app.css --watch"
   }
 }
