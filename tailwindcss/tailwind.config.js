@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["../templates/**/*.html"],
+    content: ["../app/templates/**/*.html"],
     theme: {
       extend: {},
     },
@@ -8,7 +8,21 @@ module.exports = {
       require('daisyui')
     ],
     daisyui: {
-      themes: ["dark", "retro", "coffee", "cupcake", "bumblebee"],
+      themes: ["emerald",
+        {
+          streamlit: {
+            "primary": "#F63366",
+            "secondary": "#F3A4B5",
+            "accent": "#007bff",
+            "neutral": "#333333",
+            "base-100": "#ffffff",
+            "info": "#17a2b8",
+            "success": "#28a745",
+            "warning": "#ffc107",
+            "error": "#dc3545",
+          },
+        },
+      ],
     },
     theme: {
       fontFamily: {

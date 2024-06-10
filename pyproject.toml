@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "stag-vykazy-2"
+version = "0.1.0"
+description = "Druhá verze aplikace STAG výkazy."
+authors = ["yoptohlejepeta <peta.kotlan@seznam.cz>"]
+readme = "README.md"
+packages = [{include = "stag_vykazy_2"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+pydantic = "^2.7.3"
+jinja2 = "^3.1.4"
+requests = "^2.32.3"
+pandas = "^2.2.2"
+pydantic-settings = "^2.3.1"
+logfire = {extras = ["fastapi"], version = "^0.41.0"}
+plotly = "^5.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
