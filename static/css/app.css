@@ -755,10 +755,6 @@ html {
 }
 
 @media (hover:hover) {
-  .link-hover:hover {
-    text-decoration-line: underline;
-  }
-
   .table tr.hover:hover,
   .table tr.hover:nth-child(even):hover {
     --tw-bg-opacity: 1;
@@ -946,10 +942,6 @@ html {
 .link {
   cursor: pointer;
   text-decoration-line: underline;
-}
-
-.link-hover {
-  text-decoration-line: none;
 }
 
 .table {
@@ -1169,19 +1161,6 @@ html {
   text-align: inherit;
 }
 
-@supports (color:color-mix(in oklab,black,black)) {
-  @media (hover:hover) {
-    .link-accent:hover {
-      color: color-mix(in oklab,var(--fallback-a,oklch(var(--a)/1)) 80%,black);
-    }
-  }
-}
-
-.link-accent {
-  --tw-text-opacity: 1;
-  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
-}
-
 .link:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1355,10 +1334,6 @@ html {
   margin-right: auto;
 }
 
-.flex {
-  display: flex;
-}
-
 .table {
   display: table;
 }
@@ -1376,10 +1351,6 @@ html {
   max-width: 28rem;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -1394,10 +1365,6 @@ html {
   padding-bottom: 1.5rem;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1406,18 +1373,8 @@ html {
   text-align: center;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-5xl {
   font-size: 3rem;
-  line-height: 1;
-}
-
-.text-9xl {
-  font-size: 8rem;
   line-height: 1;
 }
 
