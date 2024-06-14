@@ -11,7 +11,7 @@ module.exports = {
       themes: ["emerald",
         {
           streamlit: {
-            "primary": "#F63366",
+            "primary": "#ff5757",
             "secondary": "#F3A4B5",
             "accent": "#007bff",
             "neutral": "#333333",
