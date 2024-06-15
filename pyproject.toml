@@ -15,6 +15,7 @@ pandas = "^2.2.2"
 pydantic-settings = "^2.3.1"
 logfire = {extras = ["fastapi"], version = "^0.41.0"}
 loguru = "^0.7.2"
+holidays = "^0.50"
 
 
 [build-system]

@@ -338,6 +338,20 @@ files = [
 ]
 
 [[package]]
+name = "holidays"
+version = "0.50"
+description = "Generate and work with holidays in Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "holidays-0.50-py3-none-any.whl", hash = "sha256:7f17ce3a29bc77194ab90eaa320a8cc71823f6beb8a034c0d892cc20114278c3"},
+    {file = "holidays-0.50.tar.gz", hash = "sha256:f9b7de6c98bafefc5d19087dbb721926b31670133704f414032c22b309648e8a"},
+]
+
+[package.dependencies]
+python-dateutil = "*"
+
+[[package]]
 name = "httpcore"
 version = "1.0.5"
 description = "A minimal low-level HTTP client."
@@ -1856,4 +1870,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "a7f7afd368744a3e1ce24b7d25e79dcf86aef42c77b899b86c087fceee54c4b5"
+content-hash = "b2bf5ac6c26fa076da97e64201384f83de247f5fe551d042fd3de73a8fe8e923"

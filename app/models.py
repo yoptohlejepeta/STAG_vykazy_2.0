@@ -9,8 +9,8 @@ from pydantic import BaseModel, field_validator
 class StagResponse(BaseModel):
     """Po přáhlášení STAG vrátí na zadanou url ticket a userinfo."""
 
-    ticket: str
-    userinfo: dict
+    ticket: str | None
+    userinfo: dict | None
 
     @field_validator("userinfo", mode="before")
     def parse_userinfo(cls, v) -> dict:

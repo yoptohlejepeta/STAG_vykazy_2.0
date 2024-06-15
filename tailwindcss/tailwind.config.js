@@ -10,7 +10,7 @@ module.exports = {
     daisyui: {
       themes: ["emerald",
         {
-          streamlit: {
+          custom: {
             "primary": "#ff5757",
             "secondary": "#F3A4B5",
             "accent": "#007bff",
